@@ -1,0 +1,279 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#ffffff;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,body{
+    width:100%;
+    height:100%;
+    background:#111;
+}
+
+html{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+    overflow: hidden;
+    font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+.st-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Josefin Slab', 'Myriad Pro', Arial, sans-serif;
+}
+
+.st-container > input,
+.st-container > a {
+    position: fixed;
+    bottom: 0px;
+    width: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.st-container > input {
+    opacity: 0;
+    z-index: 1000;
+}
+
+#st-control-1, #st-control-1 + a {
+    left: 0;
+}
+#st-control-3, #st-control-3 + a {
+    left: 50%;
+}
+
+
+.st-container:before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 34px;
+    background: #e23a6e;
+    z-index: 9;
+    bottom: 0;
+}
+
+.st-container > a {
+    z-index: 10;
+    font-weight: 700;
+    background: #303030;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+}
+
+
+.st-container > input:checked + a,
+.st-container > input:checked:hover + a{
+    background: #CF9FFF;
+}
+
+.st-container > input:checked + a:after,
+.st-container > input:checked:hover + a:after{
+    bottom: 100%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #CF9FFF;
+    border-width: 20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.st-container > input:hover + a{
+    background: #CF9FFF;
+}
+
+.st-container > input:hover + a:after {
+    border-bottom-color: #CF9FFF;
+}
+
+.st-scroll,
+.st-panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.st-scroll {
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease-in-out;
+
+    /* Let's enforce some hardware acceleration */
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel{
+    background: #fff;
+    opacity: 0.3;
+    overflow: hidden;
+}
+
+#st-control-1:checked ~ .st-scroll {
+    transform: translateY(0%);
+}
+#st-control-3:checked ~ .st-scroll {
+    transform: translateY(-200%);
+}
+
+#st-panel-1 h2 {
+    color: #e23a3a;
+    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+    position: absolute;
+    font-size: 54px;
+    font-weight: 900;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    line-height: 50px;
+    margin: -70px 0 0 0;
+    padding: 0;
+    top: 50%;
+    -webkit-backface-visibility: hidden;
+}
+
+#st-panel-3 h2 {
+    color: #e23a3a;
+    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+    position: absolute;
+    font-size: 54px;
+    font-weight: 900;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    line-height: 50px;
+    margin: -70px 0 0 0;
+    padding: 0;
+    top: 25%;
+    -webkit-backface-visibility: hidden;
+}
+
+#st-control-1:checked ~ .st-scroll #st-panel-1 h2,
+#st-control-3:checked ~ .st-scroll #st-panel-3 h2{
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+
+@keyframes moveDown{
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#st-panel-1 p {
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    line-height: 22px;
+    color: #111111;
+    -webkit-text-stroke: 0.2px #ffffff;
+    z-index: 2;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+    top: 50%;
+    margin: 10px 0 0 0;
+    -webkit-backface-visibility: hidden;
+}
+
+#st-panel-3 p {
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    line-height: 22px;
+    color: #111111;
+    -webkit-text-stroke: 0.2px #ffffff;
+    z-index: 2;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+    top: 25%;
+    margin: 20px 0 0 0;
+    -webkit-backface-visibility: hidden;
+}
+
+
+#st-control-1:checked ~ .st-scroll #st-panel-1 p,
+#st-control-3:checked ~ .st-scroll #st-panel-3 p{
+    animation: moveUp 0.6s ease-in-out 0.2s backwards;
+}
+
+@keyframes moveUp{
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Colored sections */
+
+.st-color,
+.st-deco{
+    background: #fa96b5;
+}
+.st-color [data-icon]:after {
+    color: #fa96b5;
+}
+.st-color .st-deco {
+    background: #fff;
+}
+.st-color h2 {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+.st-color p {
+    color: rgba(255,255,255,0.8);
+}
+
+.thumbnail {
+    position: absolute;
+    left: 36%;
+    top: 10%;
+}
+
+
+
+
+
+canvas{
+    display:block;
+    vertical-align:bottom;
+}
