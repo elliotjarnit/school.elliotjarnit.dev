@@ -1,5 +1,8 @@
 window.onscroll = function() {scrollFunction()};
-window.onload = function () {scrollFunction()};
+
+document.addEventListener("DOMContentLoaded", function(){
+    scrollFunction()
+});
 
 function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
