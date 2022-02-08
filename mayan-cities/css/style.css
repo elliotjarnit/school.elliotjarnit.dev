@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
 body, html {
     height: 100%;
     margin: 0;
@@ -6,7 +8,7 @@ body, html {
 #navbar {
     overflow: hidden;
     background-color: white;
-    padding: 50px 0px;
+    padding: 500px 0px;
     transition: 0.4s;
     position: fixed;
     width: 100%;
@@ -61,7 +63,7 @@ body, html {
 }
 
 .parallax {
-    background-image: url('images/temple.jpg');
+    background-image: url('../images/temple.jpg');
     width: 100%;
     height: 100%;
 
@@ -69,6 +71,28 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.caption {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+.par-cont {
+    opacity: 1;
 }
 
 .first-block {
