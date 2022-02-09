@@ -7,10 +7,6 @@ body, html {
     margin: 0;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-}
-
 #navbar {
     overflow: hidden;
     background-color: white;
@@ -98,6 +94,7 @@ body {
 }
 
 .infodiv {
+    font-family: 'Inter', sans-serif;
     height:500px;
     font-size:36px;
     margin: 25px;
