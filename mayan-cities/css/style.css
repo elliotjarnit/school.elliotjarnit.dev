@@ -5,6 +5,9 @@ body, html {
     scroll-behavior: smooth;
     height: 100%;
     margin: 0;
+}
+
+body {
     font-family: 'Inter', sans-serif;
 }
 
