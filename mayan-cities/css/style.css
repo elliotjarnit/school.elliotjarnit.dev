@@ -64,15 +64,34 @@ body, html {
     }
 }
 
-.parallax {
-    background-image: url('../images/temple.jpg');
+.parallax, .parallax2, .parallax3, .parallax4 {
+    position: relative;
     width: 100%;
     height: 100%;
-
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.parallax {
+    background-image: url('../images/temple.jpg');
+}
+
+.parallax2 {
+    background-image: url('../images/farm.jpeg');
+}
+
+.parallax3 {
+    background-image: url('../images/religion.jpeg');
+}
+
+.parallax4 {
+    background-image: url('../images/people.png');
+}
+
+div {
+    display: block;
 }
 
 .caption {
@@ -93,100 +112,14 @@ body, html {
     letter-spacing: 10px;
 }
 
-.parallax2 {
-    background-image: url('../images/farm.jpeg');
-    width: 100%;
-    height: 100%;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.caption2 {
-    font-family: 'Playfair Display', serif;
-    position: absolute;
-    left: 0;
-    top: 220%;
-    width: 100%;
-    text-align: center;
-    color: #000;
-}
-
-.caption2 span.border2 {
-    background-color: #111;
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-}
-
-.parallax3 {
-    background-image: url('../images/religion.jpeg');
-    width: 100%;
-    height: 100%;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.caption3 {
-    font-family: 'Playfair Display', serif;
-    position: absolute;
-    left: 0;
-    top: 400%;
-    width: 100%;
-    text-align: center;
-    color: #000;
-}
-
-.caption3 span.border3 {
-    background-color: #111;
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-}
-
-
-
-.parallax4 {
-    background-image: url('../images/people.png');
-    width: 100%;
-    height: 100%;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.caption4 {
-    font-family: 'Playfair Display', serif;
-    position: absolute;
-    left: 0;
-    top: 570%;
-    width: 100%;
-    text-align: center;
-    color: #000;
-}
-
-.caption4 span.border4 {
-    background-color: #111;
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-}
 
 .infodiv {
     font-family: 'Inter', sans-serif;
-    height:500px;
-    font-size:36px;
-    margin: 25px;
+    font-size:45px;
+    margin: 27px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    display: inline-block;
 }
 
 .infodiv2 {
