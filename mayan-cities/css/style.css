@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@570&display=swap');
+@import 'animate.css';
 
 body, html {
     scroll-behavior: smooth;
@@ -30,6 +31,8 @@ body, html {
 }
 
 #navbar #title {
+    animation: tada;
+    animation-duration: 2s;
     font-size: 35px;
     font-weight: bold;
     transition: 0.4s;
@@ -102,6 +105,8 @@ div {
     width: 100%;
     text-align: center;
     color: #000;
+    animation: lightSpeedInRight;
+    animation-duration: 1s;
 }
 
 .caption span.border {
@@ -120,6 +125,7 @@ div {
     margin-top: 45px;
     margin-bottom: 45px;
     display: inline-block;
+
 }
 
 .infodiv2 {
