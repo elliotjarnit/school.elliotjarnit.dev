@@ -115,9 +115,11 @@ div {
 
 .infodiv {
     font-family: 'Inter', sans-serif;
-    height:500px;
-    font-size:36px;
-    margin: 30px;
+    font-size:45px;
+    margin: 27px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    display: inline-block;
 }
 
 .infodiv2 {
